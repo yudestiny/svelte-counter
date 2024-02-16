@@ -1,12 +1,14 @@
 <script lang="ts">
+  type Counter= {key: string, name: string};
+
   let counters: {key: string, name: string, count: number}[] = [
       {key: "0", name: "new", count: 0}
   ];
   let i: number = 0;
   let sum: number;
   $: sum = counters.reduce((total, current) => total + current.count, 0);
-  let counterNames: any;
-  $: counterNames = counters.reduce((all: any, current: any) => [...all, {key:current.key, name:current.name}], []);
+  let counterNames: Counter[];
+  $: counterNames = counters.reduce((all:{key: string, name: string}[] , current: Counter) => [...all, {key:current.key, name:current.name}], []);
 
   function handlePlus (index: number){
       counters[index].count += 1;
