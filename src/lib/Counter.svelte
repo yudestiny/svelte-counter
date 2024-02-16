@@ -23,8 +23,7 @@
       counters = [...counters,{name:"new", count: 0}];
   }
   function deleteCounter (index: number){
-      counters = counters.filter((c,i) => index != i)
-
+      counters = [...counters.slice(0, index), ...counters.slice(index + 1)]
   }
 </script>
 <div class="justify-center">
