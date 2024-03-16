@@ -6,7 +6,7 @@
 
 <main class="justify-center flex">
   <div>
-    <h1 class="p-2 m-6 text-6xl text-center">COUNTER</h1>
+    <!-- <h1 class="p-2 m-6 text-6xl text-center">COUNTER</h1> -->
     <Counter />
   </div>
 </main>

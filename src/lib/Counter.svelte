@@ -1,6 +1,7 @@
 <script lang="ts">
   type Counter= {key: string, name: string};
 
+  const title = '<strong>counter</strong>';
   let counters: {key: string, name: string, count: number}[] = [
       {key: "0", name: "new", count: 0}
   ];
@@ -31,6 +32,9 @@
 
   }
 </script>
+<h1 class="text-center text-5xl m-7">
+  {@html title.toUpperCase()}
+</h1>
 <div class="justify-center">
   <div class="text-center">
     <p class=" text-4xl">LIST :
