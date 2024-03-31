@@ -8,12 +8,10 @@
 
   function addCounter (){
     i += 1;
-    counters.update(c => [...c, counter]);
+    $counters = [...$counters, counter];
   }
   function handleDelete (event:any) {
-    counters.update((n) => (
-      n.filter((i) => i.id != event.detail.id)
-      ));
+    $counters = $counters.filter(i => i.id != event.detail.id);
   }
 </script>
 <h1 class="text-center text-5xl m-7">
